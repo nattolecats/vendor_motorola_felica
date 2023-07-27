@@ -1,0 +1,49 @@
+//
+// Copyright (C) 2023 The 2by2 Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app_import {
+    name: "MobileFeliCaClient",
+    apk: "*/MobileFeliCaClient.apk",
+    presigned: true,
+    product_specific: true,
+    privileged: true,
+    
+    //optional_uses_libs: [
+    //    "com.felicanetworks.felica"
+    //],
+}
+
+android_app_import {
+    name: "MobileFeliCaMenuMainApp",
+    apk: "*/MobileFeliCaMenuMainApp.apk",
+    presigned: true,
+    product_specific: true,
+    privileged: true,
+    
+    optional_uses_libs: [
+        "org.apache.http.legacy"
+    ],
+}
+
+android_app_import {
+    name: "MobileFeliCaSettingApp",
+    apk: "*/MobileFeliCaSettingApp.apk",
+    presigned: true,
+    product_specific: true,
+    privileged: true,
+    
+    //optional_uses_libs: [
+    //    "org.simalliance.openmobileapi"
+    //],
+}
+
+android_app_import {
+    name: "MobileFeliCaWebPluginBoot",
+    apk: "*/MobileFeliCaWebPluginBoot.apk",
+    presigned: true,
+    product_specific: true,
+    privileged: true,
+}
