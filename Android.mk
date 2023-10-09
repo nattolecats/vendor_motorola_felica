@@ -6,6 +6,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+ifeq ($(BOARD_VENDOR),motorola)
+
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := RemovePackagesNfcNci
@@ -19,3 +21,7 @@ LOCAL_CERTIFICATE := platform
 LOCAL_SRC_FILES := /dev/null
 
 include $(BUILD_PREBUILT)
+
+include $(call all-subdir-makefiles)
+
+endif
