@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := $(call my-dir)
-
 ifeq ($(BOARD_VENDOR),motorola)
+
+include $(call all-subdir-makefiles)
 
 include $(CLEAR_VARS)
 
@@ -21,7 +21,5 @@ LOCAL_CERTIFICATE := platform
 LOCAL_SRC_FILES := /dev/null
 
 include $(BUILD_PREBUILT)
-
-include $(call all-subdir-makefiles)
 
 endif
