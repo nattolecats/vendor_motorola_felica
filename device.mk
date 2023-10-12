@@ -7,7 +7,8 @@
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     vendor/nxp/opensource/sn100x \
-    vendor/nxp/opensource/commonsys/packages/apps/Nfc
+    vendor/nxp/opensource/commonsys/packages/apps/Nfc \
+    vendor/nxp/opensource/commonsys/external/libnfc-nci
 
 # Avoid compile errors
 RELAX_USES_LIBRARY_CHECK := true
@@ -24,7 +25,10 @@ TARGET_USES_NQ_NFC := true
 
 PRODUCT_PACKAGES += \
     Tag \
-    NQNfcNci
+    NQNfcNci \
+    libsn100nfc-nci \
+    libsn100nfc_nci_jni \
+    nfc_nci.nqx.default.hw
 
 # Force remove unwanted NfcNci
 PRODUCT_PACKAGES += RemovePackagesNfcNci
