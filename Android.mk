@@ -14,6 +14,21 @@ $(NQ_NFC_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@mkdir -p $@
 	$(hide) ln -sf /system_ext/lib64/libsn100nfc_nci_jni.so $@/libsn100nfc_nci_jni.so
 
-ALL_DEFAULT_INSTALLED_MODULES += $(NQ_NFC_SYMLINKS)
+NFC_NCI_NXP_SYMLINKS := $(TARGET_OUT_SYSTEM_EXT)/app/NfcNciNxp/lib/arm64
+$(NFC_NCI_NXP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating NfcNciNxp symlinks: $@"
+	@mkdir -p $@
+	$(hide) ln -sf /system_ext/lib64/libnfc_nci_jni.so $@/libnfc_nci_jni.so
+
+NFC_ST_SYMLINKS := $(TARGET_OUT_SYSTEM_EXT)/app/Nfc_st/lib/arm64
+$(NFC_ST_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating Nfc_st symlinks: $@"
+	@mkdir -p $@
+	$(hide) ln -sf /system_ext/lib64/libstnfc_nci_jni.so $@/libstnfc_nci_jni.so
+
+ALL_DEFAULT_INSTALLED_MODULES += \
+    $(NQ_NFC_SYMLINKS) \
+    $(NFC_NCI_NXP_SYMLINKS) \
+    $(NFC_ST_SYMLINKS)
 
 endif
