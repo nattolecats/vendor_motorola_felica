@@ -46,6 +46,8 @@ PRODUCT_PACKAGES += \
     NQNfcNci \
     NfcNciNxp \
     NfcSetup \
+    NfcSetup_st \
+    Nfc_st \
     com.android.nfc_extras \
     com.nxp.nfc \
     com.nxp.ls \

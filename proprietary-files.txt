@@ -13,6 +13,8 @@ product/etc/sysconfig/com.felicanetworks.mfs.powersave.xml
 -system_ext/app/NQNfcNci/NQNfcNci.apk;OVERRIDES=NfcNci
 -system_ext/app/NfcNciNxp/NfcNciNxp.apk
 -system_ext/app/NfcSetup/NfcSetup.apk
+-system_ext/app/Nfc_st/Nfc_st.apk
+-system_ext/app/NfcSetup_st/NfcSetup_st.apk
 system/etc/permissions/com.nxp.nfc.xml
 system/etc/permissions/com.android.nfc_extras.xml
 system/framework/com.nxp.nfc.jar
